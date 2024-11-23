@@ -1,0 +1,37 @@
+.button-login {
+    background-color: aquamarine;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+
+.button-login:hover {
+    background-color: bisque;
+}
+.navbar {
+    height: 80px;
+    box-shadow: 0px -2px 20px 10px rgba(0, 0, 0, 0.1)
+}
+.content-land {
+    padding-top: 300px;
+}
+.content-land h2{
+    font-size: 54px;
+}
+.content-land p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button-start {
+    background-color: aquamarine;
+    color: #fff;
+    font-size: 14px;
+    padding: 16px 40px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
