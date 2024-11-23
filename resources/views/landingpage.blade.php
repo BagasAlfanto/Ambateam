@@ -18,7 +18,24 @@
         <div class="container">
             <a class="navbar-brand me-auto" href="#"><img src="img/logoatas.png" alt=""
                     style="width: 50px"> Ambateam</a>
-            <a href="" class="button-login">Masuk</a>
+
+            @auth
+                    <a href="#"  class="button-login">
+                        {{auth()->user()->name}}
+                    </a>
+
+                    <a class="button-login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                        @method('delete')
+                    </form>
+                    
+
+                @else
+                    <a href="{{url('/login')}}"  class="button-login">Log In</a>
+            @endauth
         </div>
     </nav>
     {{-- End Navbar --}}

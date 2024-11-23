@@ -13,12 +13,12 @@
 }
 .navbar {
     height: 80px;
-    box-shadow: 0px -2px 20px 10px rgba(0, 0, 0, 0.1)
+    box-shadow: 0px -2px 20px 10px rgba(0, 0, 0, 0.1);
 }
 .content-land {
     padding-top: 300px;
 }
-.content-land h2{
+.content-land h2 {
     font-size: 54px;
 }
 .content-land p {
