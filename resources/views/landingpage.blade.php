@@ -20,21 +20,20 @@
                     style="width: 50px"> Ambateam</a>
 
             @auth
-                    <a href="#"  class="button-login">
-                        {{auth()->user()->name}}
-                    </a>
+                <a href="#" class="button-login">
+                    {{ auth()->user()->name }}
+                </a>
 
-                    <a class="button-login" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Logout
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                        @method('delete')
-                    </form>
-                    
-
-                @else
-                    <a href="{{url('/login')}}"  class="button-login">Log In</a>
+                <a class="button-login" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                    @method('delete')
+                </form>
+            @else
+                <a href="{{ url('/login') }}" class="button-login">Log In</a>
             @endauth
         </div>
     </nav>
@@ -44,14 +43,21 @@
     <div class="content-land">
         <div class="container">
             <span>
-                <h2>Title ....</h2>
+                <h2>Ambateam</h2>
             </span>
             <span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, saepe eius? Inventore, illo obcaecati
-                    distinctio alias deleniti voluptatum ducimus fuga non ea commodi rerum id labore. Ipsam nisi
-                    possimus consequatur.</p>
+                <p><b>Filosofi AMBA </b>dalam bahasa Jawa berarti luas, menggambarkan kelapangan hati, pikiran, dan
+                    pengetahuan.
+                    Filosofi AMBA bertujuan mengajarkan pentingnya sabar, kasih sayang, dan rendah hati terhadap sesama.
+                    Dalam
+                    bahasa Indonesia, AMBA berarti luas, tidak cuma secara fisik, tetapi juga dalam hati dan pikiran
+                    kita.
+                    Filosofi AMBA juga mengajarkan kita untuk menerima perbedaan, berpikir dengan bijaksana tanpa
+                    prasangka, dan
+                    memahami makna kehidupan dengan pemahaman yang tulus. Kesabaran adalah kunci menuju
+                    kebijaksanaan sejati.</p>
             </span>
-            <a href="" class="button-start">Get Started</a>
+            <a href="" class="button-start">Daftar Sekarang</a>
         </div>
     </div>
     {{-- End Content --}}
