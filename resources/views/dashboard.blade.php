@@ -57,6 +57,7 @@
                         Detail
                     </span>
                 </a>
+                
             </nav>
         </div>
         {{-- End Sidebar --}}

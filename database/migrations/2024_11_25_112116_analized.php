@@ -16,7 +16,9 @@ return new class extends Migration
             $table->date('date');
             $table->integer('jam');
             $table->integer('quizz');
-            $table->integer('modul');
+            // $table->unsignedBigInteger('modul'); // Kolom baru sebagai foreign key
+            // $table->foreign('modul')->references('id')->on('modul');
+            $table->json('modul');
             $table->integer('pemahaman');
             $table->timestamps();
         });

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('datamodul', function (Blueprint $table) {
+        Schema::create('modul', function (Blueprint $table) {
             $table->id();
-            $table->integer('modul');
+            $table->string('nama_modul');
             $table->timestamps();
         });
     }

@@ -75,6 +75,13 @@
             <div class="profile-container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
+                        @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        @endif
                         <form action="/insertdata" method="POST">
                             @csrf
                             <div class="mb-3">
@@ -92,11 +99,11 @@
                             <div class="mb-3">
                                 <label for="timezone">Modul:</label>
                                 <select id="timezone" class="select2-multiple form-select" multiple="multiple"
-                                    style="width: 100%;" name="modul">
-                                    <option value="1" name="modul">Modul 1</option>
-                                    <option value="2" name="modul">Modul 2</option>
-                                    <option value="3" name="modul">Modul 3</option>
-                                    <option value="4" name="modul">Modul 4</option>
+                                    style="width: 100%;" name="modul[]">
+                                    <option value="1" name="modul[0][value]">Modul 1</option>
+                                    <option value="2" name="modul[1][value]">Modul 2</option>
+                                    <option value="3" name="modul[2][value]">Modul 3</option>
+                                    <option value="4" name="modul[3][value]">Modul 4</option>
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -106,8 +113,8 @@
                                     <label class="form-check-label" for="inlineRadio1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pemahaman" id="inlineRadio2"
-                                        value="2">
+                                    <input class="form-check-input" type="radio" name="pemahaman"
+                                        id="inlineRadio2" value="2">
                                     <label class="form-check-label" for="inlineRadio2">2</label>
                                 </div>
                                 <div class="form-check form-check-inline">
@@ -202,13 +209,6 @@
                 allowClear: true
             });
 
-            // Inisialisasi ulang Select2 setiap kali modal ditampilkan
-            $('#modalId').on('shown.bs.modal', function() {
-                $('.select2-multiple').select2({
-                    placeholder: "Pilih Modul",
-                    allowClear: true
-                });
-            });
         });
     </script>
 

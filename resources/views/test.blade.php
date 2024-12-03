@@ -4,41 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel Select2 Multiple</title>
-    <!-- Include Select2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <title>AdminLTE-style Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Sidebar styles */
+        #sidebar {
+            min-height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            color: #fff;
+            transition: width 0.3s;
+        }
+
+        #sidebar.collapsed {
+            width: 80px;
+        }
+
+        #sidebar .nav-link {
+            color: #adb5bd;
+        }
+
+        #sidebar .nav-link:hover {
+            color: #fff;
+        }
+
+        #sidebar .nav-item .icon {
+            font-size: 1.2rem;
+            width: 30px;
+        }
+
+        #sidebar.collapsed .nav-item .text {
+            display: none;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #6c757d;
+        }
+
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+            color: #fff;
+        }
+
+        .navbar .nav-link:hover {
+            color: #e9ecef;
+        }
+
+        .content {
+            flex-grow: 1;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <h2>Form Multiple Select2</h2>
-        <form method="POST">
-            @csrf
-            <label for="timezone">Pilih Zona Waktu:</label>
-            <select name="timezone[]" id="timezone" class="select2-multiple" multiple="multiple" style="width: 100%;">
-                <optgroup label="Alaskan/Hawaiian Time Zone">
-                    <option value="Alaska">Alaska</option>
-                    <option value="Hawaii">Hawaii</option>
-                </optgroup>
-                <optgroup label="Pacific Time Zone">
-                    <option value="California">California</option>
-                    <option value="Nevada">Nevada</option>
-                </optgroup>
-            </select>
-            <br><br>
-            <button type="submit">Submit</button>
-        </form>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="btn btn-outline-light me-2" id="toggleSidebar">
+                <i class="bi bi-list"></i>
+            </button>
+            <a class="navbar-brand" href="#">Ambateam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div id="sidebar" class="p-3">
+            <h5 class="text-center">Menu</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="icon bi bi-speedometer2"></span>
+                        <span class="text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="icon bi bi-folder2"></span>
+                        <span class="text">Detail</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content p-3">
+            <h1>Hello, Bagas</h1>
+            <p>Hasil Analisis Kinerjamu</p>
+            <p><small>Source: indexmundi</small></p>
+            <!-- Your content here -->
+        </div>
     </div>
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include Select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.select2-multiple').select2({
-                placeholder: "Pilih zona waktu",
-                allowClear: true
-            });
+        const sidebar = document.getElementById('sidebar');
+        const toggleSidebar = document.getElementById('toggleSidebar');
+
+        toggleSidebar.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
         });
     </script>
 </body>
