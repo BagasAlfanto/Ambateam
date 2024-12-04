@@ -80,74 +80,58 @@
 
         {{-- Content --}}
         <div class="main-content">
-            <h2>Add Your Activity</h2>
+            <h2>Hello, {{ auth()->user()->name }}</h2>
             <div class="profile-container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        @if (session('success'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{ session('success') }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
-                        @endif
-                        <form action="/insertdata" method="POST">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Date:</label>
-                                <input type="date" class="form-control" name="date">
-                            </div>
-                            <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Hour:</label>
-                                <input type="text" class="form-control" name="jam">
-                            </div>
-                            <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Quiz:</label>
-                                <input type="text" class="form-control" name="quizz">
-                            </div>
-                            <div class="mb-3">
-                                <label for="timezone">Module:</label>
-                                <select id="timezone" class="select2-multiple form-select" multiple="multiple"
-                                    style="width: 100%;" name="modul[]">
-                                    <option value="1" name="modul[0][value]">Module 1</option>
-                                    <option value="2" name="modul[1][value]">Module 2</option>
-                                    <option value="3" name="modul[2][value]">Module 3</option>
-                                    <option value="4" name="modul[3][value]">Module 4</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pemahaman" id="inlineRadio1"
-                                        value="1">
-                                    <label class="form-check-label" for="inlineRadio1">1</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pemahaman"
-                                        id="inlineRadio2" value="2">
-                                    <label class="form-check-label" for="inlineRadio2">2</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pemahaman"
-                                        id="inlineRadio2" value="3">
-                                    <label class="form-check-label" for="inlineRadio2">3</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pemahaman"
-                                        id="inlineRadio2" value="4">
-                                    <label class="form-check-label" for="inlineRadio2">4</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="pemahaman"
-                                        id="inlineRadio2" value="5">
-                                    <label class="form-check-label" for="inlineRadio2">5</label>
+                <div class="row align-items-start">
+                    <!-- Kolom Kiri -->
+                    <h4>List Module</h4>
+                    
+                        {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@fat">Tambahkan Aktifitas Baru</button> --}}
+
+                        {{-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Baru</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            @csrf
+                                            <div class="mb-3">
+                                                <label for="recipient-name" class="col-form-label">Tanggal:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="message-text" class="col-form-label">Jam:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="message-text" class="col-form-label">Quizz:</label>
+                                                <input type="text" class="form-control" id="recipient-name">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="timezone">Modul:</label>
+                                                <select id="timezone" class="select2-multiple" style="width: 100%;">
+                                                    <option value="Modul1">Modul 1</option>
+                                                    <option value="Modul2">Modul 2</option>
+                                                    <option value="Modul3">Modul 3</option>
+                                                    <option value="Modul4">Modul 4</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Send message</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <a href="{{ url('/dashboard') }}"><button type="button"
-                                        class="btn btn-secondary">Cancel</button></a>
-                                <button type="submit" class="btn btn-success">Send</button>
-                            </div>
-                        </form>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -218,6 +202,13 @@
                 allowClear: true
             });
 
+            // Inisialisasi ulang Select2 setiap kali modal ditampilkan
+            $('#modalId').on('shown.bs.modal', function() {
+                $('.select2-multiple').select2({
+                    placeholder: "Pilih Modul",
+                    allowClear: true
+                });
+            });
         });
     </script>
 

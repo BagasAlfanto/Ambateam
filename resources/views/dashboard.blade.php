@@ -16,7 +16,7 @@
 
 <body>
     {{-- Navbar --}}
-    <nav class="navbar navbar2 navbar-expand-lg fixed-top">
+    <nav class="navbar navbar2 navbar-expand-lg fixed-top bg-body-tertiary">
         <a class="navbar-brand me-auto" href="#"><img src="img/logoatas.png" alt="" style="width: 50px">
             Ambateam</a>
 
@@ -41,7 +41,7 @@
         <div class="sidebar">
             <nav class="nav flex-column">
                 <p style="padding-left: 20px; color:#777777;">Menu</p>
-                <a href="" class="nav-link">
+                <a href="{{ url('/dashboard') }}" class="nav-link">
                     <span class="icon">
                         <i class="bi bi-speedometer2"></i>
                     </span>
@@ -49,12 +49,28 @@
                         Dashboard
                     </span>
                 </a>
-                <a href="" class="nav-link">
+                <a href="{{ url('/track') }}" class="nav-link">
                     <span class="icon">
                         <i class="bi bi-bar-chart-line"></i>
                     </span>
                     <span class="menu">
-                        Detail
+                        Your Track
+                    </span>
+                </a>
+                <a href="{{ url('/module') }}" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-list-task"></i>
+                    </span>
+                    <span class="menu">
+                        Module List
+                    </span>
+                </a>
+                <a href="{{ url('/analized') }}" class="nav-link">
+                    <span class="icon">
+                        <i class="bi bi-plus-square"></i>
+                    </span>
+                    <span class="menu">
+                        Track Activity
                     </span>
                 </a>
                 
@@ -66,23 +82,25 @@
         <div class="main-content">
             <h2>Hello, {{ auth()->user()->name }}</h2>
             <div class="profile-container">
-                <div class="row align-items-center">
+                <div class="row align-items-start">
                     <!-- Kolom Kiri -->
-                    <div class="col-md-6 graph" id="chart">
+                    <h4>Your Track</h4>
+                    <div class="col-md-7 graph" id="chart">
                     </div>
                     <!-- Kolom Kanan -->
-                    <div class="col-md-6 text-start">
-                        <h3>Kata kata hari ini</h3>
+                    <div class="col-md-5 text-start ">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt at voluptates, tempore
                             sunt voluptatibus tempora expedita quibusdam? Eum ducimus molestiae distinctio, unde,
                             dolorum vero ut veniam nisi iste dolore amet.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="row align-items-center">
-                    <!-- Kolom Kiri -->
-                    <div class="col-md-6 graph">
-                        <a href="{{ url('/analized') }}"><button class="btn btn-primary">Tambah Aktifitas
-                                Baru</button></a>
+                    <div class="row align-items-center">
+                        <!-- Kolom Kiri -->
+                        <div class="col-md-6 graph mt-4">
+                        <h4>Module List</h4>
+                        <h4>Add Your Activity</h4>
+                        <a href="{{ url('/analized') }}"><button class="btn btn-primary">Click Here
+                                </button></a>
                         {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" data-bs-whatever="@fat">Tambahkan Aktifitas Baru</button> --}}
 

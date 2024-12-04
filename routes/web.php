@@ -38,6 +38,13 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('/track', function () {
+    return view('track');
+});
+
+Route::get('/module', function () {
+    return view('module');
+});
 
 // TambahData
 Route::get('/analized', [AnalizedController::class, 'tambahdata'])->name('tambahdata');

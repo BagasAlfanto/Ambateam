@@ -36,7 +36,6 @@
     transition: 0.3s ease-in;
 }
 
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -50,7 +49,7 @@
     transition: width 0.3s;
 }
 
-.sidebar .nav-link{
+.sidebar .nav-link {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -58,14 +57,14 @@
     color: #fff;
 }
 
-.sidebar .nav-link:hover{
+.sidebar .nav-link:hover {
     background-color: rgb(28, 27, 27);
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     transition: all 0.3s ease-in;
 }
 
-.sidebar .nav-link:focus{
+.sidebar .nav-link:focus {
     background-color: rgb(28, 27, 27);
     color: #fff;
     border-radius: 20px;
@@ -73,11 +72,11 @@
     font-weight: 500;
 }
 
-.sidebar .menu{
+.sidebar .menu {
     font-size: 16px;
 }
 
-.sidebar .icon{
+.sidebar .icon {
     font-size: 18px;
 }
 
@@ -124,30 +123,30 @@
 }
 
 .profile-container {
-    margin-top: 50px;
-  }
+    margin-top: 24px;
+}
 
-  .graph h1 span {
+.graph h1 span {
     color: #0d6efd; /* Warna teks biru */
-  }
+}
 
-  .profile-img {
+.profile-img {
     max-width: 100%;
     border-radius: 50%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .badge-custom {
+.badge-custom {
     background-color: #ffc107; /* Warna emas */
     color: #000;
     font-size: 14px;
-  }
+}
 
-  .btn-custom {
+.btn-custom {
     background-color: #e7e7e7;
     border: none;
     color: #000;
-  }
+}
 
 @media screen and (max-width: 1024px) {
     .main-content {
@@ -167,27 +166,25 @@
     }
 }
 
-@media screen and (max-width : 480px) {
-    .sidebar{
+@media screen and (max-width: 480px) {
+    .sidebar {
         width: 60px;
     }
-    .sidebar .menu{
+    .sidebar .menu {
         display: none;
     }
-    .sidebar .nav-link{
+    .sidebar .nav-link {
         justify-content: center;
         padding-left: 0px;
     }
-    .sidebar .nav p{
+    .sidebar .nav p {
         display: none;
     }
     .navbar2 {
         margin-left: 60px;
         height: 100px;
-
     }
-    .navbar2 .navbar-brand{
-
+    .navbar2 .navbar-brand {
         width: 20px;
     }
     .main-content {
@@ -211,7 +208,4 @@
         padding: 10px;
         margin-bottom: 10px;
     }
-
 }
-
-
