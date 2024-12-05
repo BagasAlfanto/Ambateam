@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg">
 
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -36,28 +36,22 @@
                 <a href="{{ url('/login') }}" class="button-login">Log In</a>
             @endauth
         </div>
+        <u></u>
     </nav>
     {{-- End Navbar --}}
 
+    
     {{-- Content --}}
     <div class="content-land">
         <div class="container">
             <span>
-                <h2>Ambateam</h2>
+                <h2>Welcome to Amba - Your <br>Personalized Learning Tracker</h2>
             </span>
-            <span>
-                <p><b>Filosofi AMBA </b>dalam bahasa Jawa berarti luas, menggambarkan kelapangan hati, pikiran, dan
-                    pengetahuan.
-                    Filosofi AMBA bertujuan mengajarkan pentingnya sabar, kasih sayang, dan rendah hati terhadap sesama.
-                    Dalam
-                    bahasa Indonesia, AMBA berarti luas, tidak cuma secara fisik, tetapi juga dalam hati dan pikiran
-                    kita.
-                    Filosofi AMBA juga mengajarkan kita untuk menerima perbedaan, berpikir dengan bijaksana tanpa
-                    prasangka, dan
-                    memahami makna kehidupan dengan pemahaman yang tulus. Kesabaran adalah kunci menuju
-                    kebijaksanaan sejati.</p>
+            <span class="sub-title">
+                <p>Amba helps you measure how well you grasp the <br>material you've studied, with real-time <br>
+                    feedback and progress tracking.</p>
             </span>
-            <a href="" class="button-start">Daftar Sekarang</a>
+            <a href="{{ route('register') }}" class="button-start">Daftar Sekarang</a>
         </div>
     </div>
     {{-- End Content --}}

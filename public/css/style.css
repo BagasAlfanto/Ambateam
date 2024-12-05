@@ -1,6 +1,10 @@
+.bg {
+    background-color: #141414;
+    color: white;
+}
 .button-login {
-    background-color: aquamarine;
-    color: #fff;
+    background-color: #B9CBE3;
+    color: #000000;
     font-size: 14px;
     padding: 8px 20px;
     border-radius: 30px;
@@ -13,22 +17,36 @@
 }
 .navbar {
     height: 80px;
+    color: #fff;
+    background-color: #141414;
     box-shadow: 0px -2px 20px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+.navbar .navbar-brand{
+    color: #fff;
 }
 .content-land {
     padding-top: 300px;
+    text-align: center;
+    color: #B9CBE3;
 }
 .content-land h2 {
-    font-size: 54px;
+    font-size: 64px;
 }
 .content-land p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
+.content{
+    padding: 120px 150px 0px 150px;
+}
+
+
 .button-start {
-    background-color: aquamarine;
-    color: #fff;
+    background-color: #B9CBE3;
+    color: #000000;
     font-size: 14px;
     padding: 16px 40px;
     border-radius: 18px;
@@ -37,49 +55,6 @@
 }
 
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 500px;
-    padding-top: 60px;
-    padding-left: 20px;
-    width: 250px;
-    background: #021526;
-    transition: width 0.3s;
-}
-
-.sidebar .nav-link{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 10px 20px;
-    color: #fff;
-}
-
-.sidebar .nav-link:hover{
-    background-color: rgb(28, 27, 27);
-    color: rgba(255,255,255,0.5);
-    border-radius: 10px;
-    transition: all 0.3s ease-in;
-}
-
-.sidebar .nav-link:focus{
-    background-color: rgb(28, 27, 27);
-    color: #fff;
-    border-radius: 20px;
-    transition: all 0.3s ease-in;
-    font-weight: 500;
-}
-
-.sidebar .menu{
-    font-size: 16px;
-}
-
-.sidebar .icon{
-    font-size: 18px;
-}
 
 .graphBox {
     position: relative;
@@ -93,21 +68,20 @@
 /* Navbar */
 .navbar2 {
     height: 80px;
-    margin-left: 250px;
-    padding: 30px 30px;
+    padding: 30px 150px 30px 150px;
     transition: 0.3s ease-in;
+
 }
 
 .main-content {
-    margin-left: 250px; /* Lebar sidebar */
     padding-top: 90px;
-    padding: 120px 50px;
+
+    padding: 0px 150px 0px 150px;
     background-color: #ffffff;
     min-height: 100vh;
-    width: calc(100% - 200px); /* Ambil seluruh lebar layar dikurangi sidebar */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 60px;
     box-sizing: border-box; /* Pastikan padding tidak memengaruhi lebar */
 }
 
@@ -163,8 +137,7 @@
         width: calc(100% - 60px); /* Sesuaikan dengan layar kecil */
         padding: 10px;
     }
-    .graph {
-    }
+
 }
 
 @media screen and (max-width : 480px) {
