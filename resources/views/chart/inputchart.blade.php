@@ -108,14 +108,15 @@
                             <div class="mb-3">
                                 <label for="timezone">Module:</label>
                                 <select id="timezone" class="select2-multiple form-select" multiple="multiple"
-                                    style="width: 100%;" name="modul[]">
-                                    <option value="1" name="modul[0][value]">Module 1</option>
-                                    <option value="2" name="modul[1][value]">Module 2</option>
-                                    <option value="3" name="modul[2][value]">Module 3</option>
-                                    <option value="4" name="modul[3][value]">Module 4</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
+                                style="width: 100%;" name="modul[]">
+                                <option value="1" name="modul[0][value]">Module 1</option>
+                                <option value="2" name="modul[1][value]">Module 2</option>
+                                <option value="3" name="modul[2][value]">Module 3</option>
+                                <option value="4" name="modul[3][value]">Module 4</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 mt-4">
+                                <label for="timezone">How much do you understand:</label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="pemahaman" id="inlineRadio1"
                                         value="1">
@@ -142,7 +143,7 @@
                                     <label class="form-check-label" for="inlineRadio2">5</label>
                                 </div>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 mt-4">
                                 <a href="{{ url('/dashboard') }}"><button type="button"
                                         class="btn btn-secondary">Cancel</button></a>
                                 <button type="submit" class="btn btn-success">Send</button>

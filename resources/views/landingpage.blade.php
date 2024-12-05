@@ -46,16 +46,7 @@
                 <h2>Ambateam</h2>
             </span>
             <span>
-                <p><b>Filosofi AMBA </b>dalam bahasa Jawa berarti luas, menggambarkan kelapangan hati, pikiran, dan
-                    pengetahuan.
-                    Filosofi AMBA bertujuan mengajarkan pentingnya sabar, kasih sayang, dan rendah hati terhadap sesama.
-                    Dalam
-                    bahasa Indonesia, AMBA berarti luas, tidak cuma secara fisik, tetapi juga dalam hati dan pikiran
-                    kita.
-                    Filosofi AMBA juga mengajarkan kita untuk menerima perbedaan, berpikir dengan bijaksana tanpa
-                    prasangka, dan
-                    memahami makna kehidupan dengan pemahaman yang tulus. Kesabaran adalah kunci menuju
-                    kebijaksanaan sejati.</p>
+                <p><b>Filosofi AMBA </b>The AMBA philosophy in Javanese means vast, describing the expansiveness of the heart, mind, and knowledge. The AMBA philosophy aims to teach the importance of patience, compassion, and humility towards others. In Indonesian, AMBA means vast, not only physically but also in our hearts and minds. The AMBA philosophy also teaches us to accept differences, think wisely without prejudice, and understand the meaning of life with sincere understanding. Patience is the key to true wisdom.</p>
             </span>
             <a href="" class="button-start">Daftar Sekarang</a>
         </div>
