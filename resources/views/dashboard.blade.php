@@ -102,50 +102,61 @@
             <div class="col-md-6">
                 <div class="card p-3">
                     <h5>Analyze</h5>
-                    <form>
+                    <form action="/insertdata" method="POST">
+                        @csrf
                         <div class="mb-3">
-                            <label for="date" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="date">
+                            <label for="recipient-name" class="col-form-label">Tanggal:</label>
+                            <input type="date" class="form-control" name="date">
                         </div>
                         <div class="mb-3">
-                            <label for="hour" class="form-label">How long did you study?</label>
-                            <input type="text" class="form-control" id="hour">
+                            <label for="message-text" class="col-form-label">Jam:</label>
+                            <input type="text" class="form-control" name="jam">
                         </div>
                         <div class="mb-3">
-                            <label for="quiz" class="form-label">How many quizzes did you take?</label>
-                            <input type="text" class="form-control" id="quiz">
+                            <label for="message-text" class="col-form-label">Quizz:</label>
+                            <input type="text" class="form-control" name="quizz">
                         </div>
                         <div class="mb-3">
-                            <label for="module" class="form-label">What subject did you learn?</label>
-                            <input type="text" class="form-control" id="module">
+                            <label for="timezone">Modul:</label>
+                            <select id="timezone" class="select2-multiple form-select" multiple="multiple"
+                                style="width: 100%;" name="modul[]">
+                                <option value="1" name="modul[0][value]">Modul 1</option>
+                                <option value="2" name="modul[1][value]">Modul 2</option>
+                                <option value="3" name="modul[2][value]">Modul 3</option>
+                                <option value="4" name="modul[3][value]">Modul 4</option>
+                            </select>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">How much do you understand?</label>
-                            <div>
-                                <input type="radio" class="btn-check" name="understand" id="u1"
-                                    autocomplete="off">
-                                <label class="btn btn-outline-light" for="u1">1</label>
-
-                                <input type="radio" class="btn-check" name="understand" id="u2"
-                                    autocomplete="off">
-                                <label class="btn btn-outline-light" for="u2">2</label>
-
-                                <input type="radio" class="btn-check" name="understand" id="u3"
-                                    autocomplete="off">
-                                <label class="btn btn-outline-light" for="u3">3</label>
-
-                                <input type="radio" class="btn-check" name="understand" id="u4"
-                                    autocomplete="off">
-                                <label class="btn btn-outline-light" for="u4">4</label>
-
-                                <input type="radio" class="btn-check" name="understand" id="u5"
-                                    autocomplete="off">
-                                <label class="btn btn-outline-light" for="u5">5</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pemahaman" id="inlineRadio1"
+                                    value="1">
+                                <label class="form-check-label" for="inlineRadio1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pemahaman" id="inlineRadio2"
+                                    value="2">
+                                <label class="form-check-label" for="inlineRadio2">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pemahaman" id="inlineRadio2"
+                                    value="3">
+                                <label class="form-check-label" for="inlineRadio2">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pemahaman" id="inlineRadio2"
+                                    value="4">
+                                <label class="form-check-label" for="inlineRadio2">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="pemahaman" id="inlineRadio2"
+                                    value="5">
+                                <label class="form-check-label" for="inlineRadio2">5</label>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-light me-2">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Send</button>
+                        <div class="mb-3">
+                            <a href="{{ url('/dashboard') }}"><button type="button"
+                                    class="btn btn-secondary">Batal</button></a>
+                            <button type="submit" class="btn btn-success">Kirim</button>
                         </div>
                     </form>
                 </div>

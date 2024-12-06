@@ -32,11 +32,9 @@
 
         .card .btn {
             background-color: #B9CBE3;
+            color: #1E1F21;
         }
 
-        .card .btn:hover {
-            background-color: #7e8389;
-        }
 
         .login {
             color: #B9CBE3;

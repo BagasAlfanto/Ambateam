@@ -3,18 +3,15 @@
     color: white;
 }
 .button-login {
-    background-color: #B9CBE3;
-    color: #000000;
-    font-size: 14px;
+    color: #D7E1ED;
+    font-size: 20px;
+    font-weight: 600;
     padding: 8px 20px;
     border-radius: 30px;
     text-decoration: none;
     transition: 0.3s ease-in;
 }
 
-.button-login:hover {
-    background-color: bisque;
-}
 .navbar {
     height: 80px;
     color: #fff;
@@ -22,8 +19,11 @@
     box-shadow: 0px -2px 20px 10px rgba(0, 0, 0, 0.1);
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
 }
+.navbar .navbar-brand img {
+    margin-right: 20px;
+}
 .navbar .navbar-brand{
-    color: #fff;
+    color: #B9CBE3;
 }
 .content-land {
     padding-top: 300px;
@@ -31,9 +31,10 @@
     color: #B9CBE3;
 }
 .content-land h2 {
-    font-size: 64px;
+    font-size: 60px;
 }
-.content-land p {
+.content-land p{
+    color: #D7E1ED;
     font-size: 24px;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -46,12 +47,16 @@
 
 .button-start {
     background-color: #B9CBE3;
-    color: #000000;
-    font-size: 14px;
-    padding: 16px 40px;
-    border-radius: 18px;
+    color: #141414;
+    font-size: 20px;
+    padding: 12px 35px;
+    border-radius: 20px;
     text-decoration: none;
     transition: 0.3s ease-in;
+}
+
+.daftar {
+    font-weight: bold;
 }
 
 

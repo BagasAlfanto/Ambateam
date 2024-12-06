@@ -16,31 +16,30 @@
     {{-- Navbar --}}
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand me-auto" href="#"><img src="img/logoatas.png" alt=""
-                    style="width: 50px"> Ambateam</a>
+            <a class="navbar-brand" href="#"><img src="img/logoatas.png" alt=""
+                    style="width: 50px; height:50px">
+                Ambateam</a>
 
             @auth
-                <a href="#" class="button-login">
-                    {{ auth()->user()->name }}
-                </a>
 
-                <a class="button-login" href="{{ route('logout') }}"
-                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    Logout
-                </a>
+
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                     @method('delete')
                 </form>
+                <a class="button-login" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
             @else
-                <a href="{{ url('/login') }}" class="button-login">Log In</a>
+                <a href="{{ url('/login') }}" class="button-login">Login</a>
             @endauth
         </div>
         <u></u>
     </nav>
     {{-- End Navbar --}}
 
-    
+
     {{-- Content --}}
     <div class="content-land">
         <div class="container">
@@ -51,7 +50,7 @@
                 <p>Amba helps you measure how well you grasp the <br>material you've studied, with real-time <br>
                     feedback and progress tracking.</p>
             </span>
-            <a href="{{ route('register') }}" class="button-start">Daftar Sekarang</a>
+            <a href="{{ route('register') }}" class="button-start daftar">Get Started Now</a>
         </div>
     </div>
     {{-- End Content --}}
