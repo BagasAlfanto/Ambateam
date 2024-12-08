@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\AnalizedController;
 
 Route::view('/', 'landingpage')->name('landingpage');
+Route::view('/test', 'dashboards');
 
 Route::middleware('guest')->group(function () {
     // Login
@@ -25,7 +26,7 @@ Route::middleware('auth')->group(function () {
 
     Route::view('/dashboard', 'dashboard');
 
-    // TambahData
-    Route::get('/analized', [AnalizedController::class, 'tambahdata'])->name('tambahdata');
+    // // TambahData
+    // Route::get('/analized', [AnalizedController::class, 'tambahdata'])->name('tambahdata');
     Route::post('/insertdata', [AnalizedController::class, 'insertdata'])->name('insert');
 });

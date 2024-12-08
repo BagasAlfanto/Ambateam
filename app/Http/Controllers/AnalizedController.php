@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\analized;
+use App\Models\Inputs;
 use Illuminate\Http\Request;
 
 class AnalizedController extends Controller
@@ -23,12 +23,12 @@ class AnalizedController extends Controller
         ]);
         // Loop untuk menyimpan setiap modul
 
-        Analized::create([
+        Inputs::create([
             'date' => $request->date,
-            'jam' => $request->jam,
+            'total_hours' => $request->jam,
             'quizz' => $request->quizz,
             'modul' => json_encode($request->modul), // Simpan ID modul dari select2
-            'pemahaman' => $request->pemahaman,
+            'comprehension_index' => $request->pemahaman,
 
         ]);
         return redirect('/dashboard')->with('success', 'Data berhasil disimpan!');
