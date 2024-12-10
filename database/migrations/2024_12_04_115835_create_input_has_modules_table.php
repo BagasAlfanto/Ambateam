@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('modul', function (Blueprint $table) {
+        Schema::create('input_has_modules', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_modul');
+            $table->unsignedBigInteger('input_id');
+            $table->foreign('input_id')->references('id')->on('inputs')->onDelete('cascade');
+            $table->unsignedBigInteger('module_id');
+            $table->foreign('module_id')->references('id')->on('modules')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('datamodul');
+        Schema::dropIfExists('input_has_modules');
     }
 };

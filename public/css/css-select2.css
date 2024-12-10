@@ -1,0 +1,38 @@
+.select2-container {
+    width: 100% !important;
+
+}
+
+/* Warna background hitam untuk dropdown pilihan */
+.select2-container--default .select2-results__option {
+    background-color: #282C32 !important;
+    color: white !important;
+    border: none;
+}
+
+/* Warna background saat opsi di-hover atau dipilih */
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: gray !important;
+    color: white !important;
+    border: none;
+
+
+}
+
+/* Styling pada area input/dropdown utama */
+.select2-container--default .select2-selection--multiple {
+    background-color: #282C32 !important;
+    color: white !important;
+    height: 35px;
+    border: none;
+
+    border-radius: 6px;
+}
+
+/* Warna teks dalam tag selected di dalam dropdown */
+.select2-container--default .select2-selection__choice {
+    background-color: #282C32 !important;
+    color: white !important;
+    border: none;
+
+}
