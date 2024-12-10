@@ -31,4 +31,24 @@ class InputModules extends Model
     protected $guarded = [
         'id'
     ];
+
+    /**
+     * Relationship with inputs.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function inputs()
+    {
+        return $this->belongsTo(Inputs::class);
+    }
+
+    /**
+     * Relationship with modules.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function modules()
+    {
+        return $this->belongsTo(Modules::class);
+    }
 }

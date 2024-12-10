@@ -23,4 +23,14 @@ class Results extends Model
     protected $guarded = [
         'id'
     ];
+
+    /**
+     * Relationship with inputs.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function inputs()
+    {
+        return $this->belongsTo(Inputs::class);
+    }
 }

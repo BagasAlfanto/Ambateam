@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
-use App\Http\Controllers\AnalizedController;
+use App\Http\Controllers\Dashboard\AnalizedController;
+use App\Http\Controllers\Dashboard\DashboardController;
 
-Route::view('/', 'landingpage')->name('landingpage');
-Route::view('/test', 'dashboards');
+Route::view('/', 'pages.landing')->name('landing');
 
 Route::middleware('guest')->group(function () {
     // Login
@@ -23,10 +23,8 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::delete('/logout', LogoutController::class)->name('logout');
+    Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
-    Route::view('/dashboard', 'dashboard');
-
-    // // TambahData
-    // Route::get('/analized', [AnalizedController::class, 'tambahdata'])->name('tambahdata');
-    Route::post('/insertdata', [AnalizedController::class, 'insertdata'])->name('insert');
+    // TambahData
+    Route::post('/analyze', AnalizedController::class)->name('analyze');
 });

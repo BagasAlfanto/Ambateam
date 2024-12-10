@@ -1,0 +1,29 @@
+.card {
+    background-color: #1E1F21;
+}
+
+.card h2 {
+    color: #B9CBE3;
+}
+
+.card .form-label {
+    color: #fff
+}
+
+.card .form-control {
+    background-color: #282C32;
+    color: #fff;
+}
+
+.card .form-control::placeholder {
+    color: #797979
+}
+
+.card .btn {
+    background-color: #B9CBE3;
+    color: #1E1F21;
+}
+
+.button-helper {
+    color: #B9CBE3;
+}
