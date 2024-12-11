@@ -3,14 +3,13 @@ body {
 }
 
 .card {
-    background-color: #1E1F21;
+    background-color: #1e1f21;
     border: none;
-
 }
 
 .form-control,
 .form-select {
-    background-color: #282C32;
+    background-color: #282c32;
     color: white;
     border: none;
 }
@@ -24,7 +23,7 @@ body {
 .left,
 .form-right,
 .form-control::placeholder {
-    color: #D7E1ED
+    color: #5c636a;
 }
 
 .right .card {
@@ -38,10 +37,14 @@ body {
 .moduls button {
     width: 100%;
     margin-bottom: 10px;
-    background-color: #282C32;
-    border: none
+    background-color: #282c32;
+    border: none;
 }
 
 rect {
-    fill: #B9CBE3
+    fill: #b9cbe3;
+}
+
+label {
+    color: #d7e1ed;
 }

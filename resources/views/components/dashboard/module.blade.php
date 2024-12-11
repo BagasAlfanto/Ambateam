@@ -1,5 +1,8 @@
 @push('styles')
     <style>
+        .moduls {
+            height: auto
+        }
         .moduls .btn {
             width: 100%;
         }
@@ -14,8 +17,8 @@
 @endpush
 
 <div class="col-md-6">
-    <div class="card p-3">
-        <h5>Mata Pelajaran</h5>
+    <div class="card p-3" style="color: #d7e1ed">
+        <h5>Module</h5>
         <div class="row moduls">
             <div class="buttons-container">
                 @foreach ($modules as $module)

@@ -7,12 +7,12 @@
     <div class="my-5 content">
         <div class="row g-4">
             <span class="button-login">
-                Selamat datang, {{ auth()->user()->name }}
+                Hello, {{ auth()->user()->name }}!
             </span>
 
             <div class="col-md-6 left">
                 <div class="card p-3">
-                    <h5>Progress Kamu</h5>
+                    <h5 style="color: #d7e1ed; padding-bottom: 10px">Your Progress</h5>
                     <div
                         id="chart"
                         class="bg-secondary rounded"
@@ -39,24 +39,22 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Hasil Analisis Pembelajaran Kamu',
+                    text: 'Your Learning Analysis Results',
                     align: 'left'
                 },
                 xAxis: {
-                    categories: ['USA', 'China', 'Brazil', 'EU', 'Argentina', 'India'],
+                    categories: [1, 2, 3, 4, 5, 6, 7],
                     crosshair: true,
-                    accessibility: {
-                        description: 'Countries'
-                    }
+                    
                 },
                 yAxis: {
                     min: 0,
                     title: {
-                        text: '1000 metric tons (MT)'
+                        text: 'Skor'
                     }
                 },
                 tooltip: {
-                    valueSuffix: ' (1000 MT)'
+                    valueSuffix: ''
                 },
                 plotOptions: {
                     column: {
@@ -65,13 +63,13 @@
                     }
                 },
                 series: [{
-                        name: 'Corn',
-                        data: [387749, 280000, 129000, 64300, 54000, 34300]
+                        name: 'Desember',
+                        data: [0.2, 0.9, 0.3, 0.6, 0.5, 0.8, 1]
                     },
-                    {
-                        name: 'Wheat',
-                        data: [45321, 140000, 10000, 140500, 19500, 113500]
-                    }
+                    // {
+                    //     name: 'Wheat',
+                    //     data: [45321, 140000, 10000, 140500, 19500, 113500]
+                    // }
                 ]
             });
         </script>

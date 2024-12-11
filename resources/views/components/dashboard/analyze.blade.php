@@ -1,18 +1,18 @@
 <div class="card p-3">
-    <h5 style="color: #D7E1ED">Analisis Pembelajaran</h5>
+    <h5 style="color: #D7E1ED">Learning Analysis</h5>
 
     <form action="{{ $isTodayAlreadySubmitted ? '#' : route('analyze') }}" method="POST">
         @csrf
 
         @if ($isTodayAlreadySubmitted)
             <div class="alert alert-warning">
-                Kamu sudah mengisi analisis hari ini. Terus semangat belajarnya!
+                You have completed today's analysis. Keep up the spirit of learning!
             </div>
         @endif
 
         <div class="form-right">
             <div class="mb-3">
-                <label for="date" class="col-form-label">Tanggal Input</label>
+                <label for="date" class="col-form-label">Date</label>
                 <span class="form-control">{{ now()->format('d F Y') }}</span>
                 <input type="date" class="form-control" name="date" value="{{ now()->format('Y-m-d') }}" placeholder="Input Date" hidden disabled="{{ $isTodayAlreadySubmitted }}" />
                 @error('date')
@@ -21,27 +21,27 @@
             </div>
 
             <div class="mb-3">
-                <label for="hours" class="col-form-label">Jumlah Jam:</label>
-                <input type="number" class="form-control" name="hours"
-                    placeholder="Berapa jam kamu belajar?" disabled="{{ $isTodayAlreadySubmitted }}">
+                <label for="hours" class="col-form-label">Total Hours:</label>
+                <input type="number" class="form-control" name="hours" style="background-color: #282C32"
+                    placeholder="How many hours did you study?" disabled="{{ $isTodayAlreadySubmitted }}">
                 @error('hours')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
 
             <div class="mb-3">
-                <label for="quiz" class="col-form-label">Total Kuis:</label>
-                <input type="number" class="form-control" name="quiz"
-                    placeholder="berapa banyak kuis yang kamu kerjakan?" disabled="{{ $isTodayAlreadySubmitted }}">
+                <label for="quiz" class="col-form-label">Total Quiz:</label>
+                <input type="number" class="form-control" name="quiz" style="background-color: #282C32"
+                    placeholder="How many quizzes have you completed?" disabled="{{ $isTodayAlreadySubmitted }}">
                 @error('quiz')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
 
             <div class="mb-3">
-                <label for="modules[]">Mata Pelajaran:</label>
+                <label for="modules[]">Module:</label>
                 @if ($isTodayAlreadySubmitted)
-                    <input class="form-control" placeholder="Pilih Mata Pelajaran" disabled>
+                    <input class="form-control" placeholder="Select Module" disabled>
                 @else
                     <select class="js-select2-multi" multiple="multiple" name="modules[]">
                         @foreach ($modules as $module)
@@ -57,9 +57,9 @@
         </div>
 
         <label class="col-form-label" style="color:#D7E1ED">
-            Seberapa Pemahaman kamu:
+            How much do you understand:
         </label>
-        <div style="margin: 0px 0px 30px 0px" class="button-input">
+        <div style="margin: 0px 0px 30px 0px" class="button-input gap-5">
             @php
                 $options = [
                     'u1' => '20%',
@@ -93,7 +93,7 @@
                     class="btn btn-secondary"
                     style="background-color: #282C32; color:#B9CBE3"
                 >
-                    Batal
+                    Cancel
                 </button>
             </a>
             <button
@@ -101,7 +101,7 @@
                 class="btn btn-success"
                 style="background-color: #B9CBE3; color:#282C32"
                 >
-                Kirim
+                Send
             </button>
         </div>
     </form>
