@@ -1,8 +1,10 @@
 @push('styles')
     <style>
         .moduls {
-            height: auto
+            max-height: 300px; 
+            overflow-y: auto; 
         }
+
         .moduls .btn {
             width: 100%;
         }
@@ -15,6 +17,7 @@
         }
     </style>
 @endpush
+
 
 <div class="col-md-6">
     <div class="card p-3" style="color: #d7e1ed">

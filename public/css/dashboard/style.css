@@ -27,7 +27,8 @@ body {
 }
 
 .right .card {
-    height: 575px;
+    max-height: 575px;
+    overflow-y: auto;
 }
 
 .left .card {
