@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/style.css">
 <div class="card p-3">
     <h5 style="color: #D7E1ED">Learning Analysis</h5>
 
@@ -35,7 +36,7 @@
                     class="form-control"
                     name="hours"
                     placeholder="How many hours did you study?"
-                    style="background-color: #282C32"
+                    style="background-color: #282C32; color:#fff"
                     {{ $isTodayAlreadySubmitted ? 'disabled' : '' }}
                 />
                 @error('hours')
@@ -49,7 +50,7 @@
                     type="number"
                     class="form-control"
                     name="quiz"
-                    style="background-color: #282C32"
+                    style="background-color: #282C32; color:#fff"
                     placeholder="How many quizzes have you completed?"
                     {{ $isTodayAlreadySubmitted ? 'disabled' : '' }}
                 />
@@ -86,7 +87,7 @@
                     'u2' => '40%',
                     'u3' => '60%',
                     'u4' => '80%',
-                    'u5' => '100%'
+                    'u5' => '100%',
                 ];
             @endphp
 

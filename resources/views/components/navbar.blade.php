@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand me-auto" href="{{ url('/') }}">
-        <img src="{{ asset('img/logo.png') }}" alt="Logo" />
+        <img src="{{ asset('img/logo.png') }}" alt="Logo">
         Ambateam
     </a>
 
@@ -15,5 +15,6 @@
         </form>
     @else
         <a href="{{ route('login') }}" class="button-login">Log In</a>
+
     @endauth
 </nav>

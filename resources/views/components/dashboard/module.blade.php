@@ -1,9 +1,9 @@
 @push('styles')
     <style>
         .moduls {
-            height: auto;
             max-height: 300px;
-            overflow-y: auto;
+            overflow-y: scroll;
+            scrollbar-color: rgb(159, 159, 159) #282C32;
         }
 
         .moduls .btn {
@@ -16,12 +16,22 @@
             gap: 10px;
             margin-top: 1vh;
         }
+
+        @media screen and (max-width: 1024px) {
+            .buttons-container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+                margin-top: 1vh;
+            }
+        }
     </style>
 @endpush
 
+
 <div class="col-md-6">
     <div class="card p-3" style="color: #d7e1ed">
-        <h5>Modules</h5>
+        <h5>Module</h5>
         <div class="row moduls">
             <div class="buttons-container">
                 @foreach ($modules as $module)

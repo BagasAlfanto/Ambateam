@@ -36,9 +36,9 @@
 }
 
 .content-land {
-    padding-top: 350px;
+    padding-top: 320px;
     text-align: center;
-    color: #B9CBE3;
+    color: #b9cbe3;
 }
 
 .content-land h2 {
@@ -87,9 +87,9 @@
 }
 
 /* Navbar */
+
 .main-content {
     padding-top: 90px;
-
     padding: 0px 150px 0px 150px;
     background-color: #ffffff;
     min-height: 100vh;
@@ -138,26 +138,67 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .content-land {
+        padding-top: 450px;
+        text-align: center;
+        color: #b9cbe3;
+    }
+    .content-land h2 {
+        font-size: 60px;
+    }
+    .content-land p {
+        color: #d7e1ed;
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
     .main-content {
         margin-left: 200px; /* Sesuaikan dengan sidebar lebih kecil */
         width: calc(100% - 200px); /* Sesuai ruang tersisa */
         padding: 15px;
     }
     .navbar {
-        height: 80px;
-        padding: 10px 100px 30px 100px;
+        height: 120px;
+        padding: 30px 100px 30px 100px;
         transition: 0.3s ease-in;
     }
     .navbar .button-login {
-        font-size: 20px;
+        font-size: 28px;
         font-weight: 600;
+    }
+    .navbar .navbar-brand{
+        font-size: 32px;
+    }
+    .navbar .navbar-brand img{
+        width: 60px;
+        height: 60px;
     }
     .content {
         padding: 120px 100px 0px 100px;
     }
+    .button-input label{
+        width: 60px;
+        font-size: 12px;
+    }
 }
 
+
 @media screen and (max-width: 768px) {
+    .content-land {
+        padding-top: 330px;
+        padding-bottom: 300px;
+        text-align: center;
+        color: #b9cbe3;
+    }
+    .content-land h2 {
+        font-size: 45px;
+    }
+    .content-land p {
+        color: #d7e1ed;
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
     .main-content {
         margin-left: 60px; /* Sesuaikan dengan sidebar kecil */
         width: calc(100% - 60px); /* Sesuaikan dengan layar kecil */
@@ -168,13 +209,54 @@
         padding: 5px 80px 5px 80px;
         transition: 0.3s ease-in;
     }
-    .content{
+    .navbar .button-login {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .navbar .navbar-brand{
+        font-size: 26px;
+    }
+    .navbar .navbar-brand img{
+        width: 50px;
+        height: 50px;
+    }
+    .content {
         padding: 120px 80px 0px 80px;
     }
-
+    .button-input label{
+        width: 60px;
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    .content-land {
+        margin: 0px 20px 0px 20px;
+        padding-top: 250px;
+        padding-bottom: 250px;
+        text-align: center;
+        color: #b9cbe3;
+    }
+    .content-land h2 {
+        font-size: 28px;
+    }
+    .content-land p {
+        color: #d7e1ed;
+        font-size: 16px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .navbar .button-login {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .navbar .navbar-brand{
+        font-size: 18px;
+    }
+    .navbar .navbar-brand img{
+        width: 40px;
+        height: 40px;
+    }
     .sidebar {
         width: 60px;
     }
@@ -214,10 +296,11 @@
         padding: 5px 30px 5px 30px;
         transition: 0.3s ease-in;
     }
-    .content{
+    .content {
         padding: 120px 30px 0px 30px;
     }
-
+    .button-input label{
+        width: 60px;
+        font-size: 12px;
+    }
 }
-
-

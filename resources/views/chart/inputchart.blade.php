@@ -89,7 +89,7 @@
                                 <input type="date" class="form-control" name="date">
                             </div>
                             <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Jam:</label>
+                                <label for="message-text" class="form-label">Jam:</label>
                                 <input type="text" class="form-control" name="jam">
                             </div>
                             <div class="mb-3">
