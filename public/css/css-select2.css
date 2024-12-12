@@ -1,5 +1,10 @@
+.js-select2-multi{
+    overflow-y: scroll;
+    scrollbar-color: rgb(159, 159, 159) #282C32;
+}
 .select2-container {
     width: 100% !important;
+
 }
 
 /* Warna background hitam untuk dropdown pilihan */
@@ -7,11 +12,12 @@
     background-color: #282C32 !important;
     color: white !important;
     border: none;
+
 }
 
 /* Warna background saat opsi di-hover atau dipilih */
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: gray !important;
+    background-color: #6c757d !important;
     color: white !important;
     border: none;
 }
@@ -20,7 +26,6 @@
 .select2-container--default .select2-selection--multiple {
     background-color: #282C32 !important;
     color: white !important;
-    height: 35px;
     border: none;
     border-radius: 6px;
 }
@@ -30,4 +35,11 @@
     background-color: #282C32 !important;
     color: white !important;
     border: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .button-input label{
+        width: 70px;
+        font-size: 14px;
+    }
 }

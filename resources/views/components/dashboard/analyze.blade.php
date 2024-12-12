@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/style.css">
 <div class="card p-3">
     <h5 style="color: #D7E1ED">Learning Analysis</h5>
 
@@ -14,7 +15,8 @@
             <div class="mb-3">
                 <label for="date" class="col-form-label">Date</label>
                 <span class="form-control">{{ now()->format('d F Y') }}</span>
-                <input type="date" class="form-control" name="date" value="{{ now()->format('Y-m-d') }}" placeholder="Input Date" hidden disabled="{{ $isTodayAlreadySubmitted }}" />
+                <input type="date" class="form-control" name="date" value="{{ now()->format('Y-m-d') }}"
+                    placeholder="Input Date" hidden disabled="{{ $isTodayAlreadySubmitted }}" />
                 @error('date')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
@@ -22,7 +24,7 @@
 
             <div class="mb-3">
                 <label for="hours" class="col-form-label">Total Hours:</label>
-                <input type="number" class="form-control" name="hours" style="background-color: #282C32"
+                <input type="number" class="form-control" name="hours" style="background-color: #282C32; color:#fff"
                     placeholder="How many hours did you study?" disabled="{{ $isTodayAlreadySubmitted }}">
                 @error('hours')
                     <div class="text-danger">{{ $message }}</div>
@@ -31,7 +33,7 @@
 
             <div class="mb-3">
                 <label for="quiz" class="col-form-label">Total Quiz:</label>
-                <input type="number" class="form-control" name="quiz" style="background-color: #282C32"
+                <input type="number" class="form-control" name="quiz" style="background-color: #282C32; color:#fff"
                     placeholder="How many quizzes have you completed?" disabled="{{ $isTodayAlreadySubmitted }}">
                 @error('quiz')
                     <div class="text-danger">{{ $message }}</div>
@@ -43,7 +45,7 @@
                 @if ($isTodayAlreadySubmitted)
                     <input class="form-control" placeholder="Select Module" disabled>
                 @else
-                    <select class="js-select2-multi" multiple="multiple" name="modules[]">
+                    <select class="js-select2-multi" multiple="multiple" name="modules[]" placeholder="Aoakokoawa">
                         @foreach ($modules as $module)
                             <option value="{{ $module->id }}">{{ $module->name }}</option>
                         @endforeach
@@ -66,20 +68,13 @@
                     'u2' => '40%',
                     'u3' => '60%',
                     'u4' => '80%',
-                    'u5' => '100%'
+                    'u5' => '100%',
                 ];
             @endphp
 
             @foreach ($options as $id => $label)
-                <input
-                    type="radio"
-                    class="btn-check"
-                    name="understand"
-                    id="{{ $id }}"
-                    autocomplete="off"
-                    value="{{ substr($id, 1) }}"
-                    disabled="{{ $isTodayAlreadySubmitted }}"
-                />
+                <input type="radio" class="btn-check" name="understand" id="{{ $id }}" autocomplete="off"
+                    value="{{ substr($id, 1) }}" disabled="{{ $isTodayAlreadySubmitted }}" />
                 <label class="btn btn-outline-light" for="{{ $id }}">
                     {{ $label }}
                 </label>
@@ -87,20 +82,12 @@
         </div>
 
         <div class="mb-3 text-end">
-            <a href="{{ route('dashboard') }}">
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    style="background-color: #282C32; color:#B9CBE3"
-                >
+            <a href="{{ route('dashboard') }}" style="color: rgba(0,0,0,0)">
+                <button type="button" class="btn btn-secondary" style="background-color: #282C32; color:#B9CBE3;">
                     Cancel
                 </button>
             </a>
-            <button
-                type="submit"
-                class="btn btn-success"
-                style="background-color: #B9CBE3; color:#282C32"
-                >
+            <button type="submit" class="btn" style="background-color: #B9CBE3; color:#282C32">
                 Send
             </button>
         </div>

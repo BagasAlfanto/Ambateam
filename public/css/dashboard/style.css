@@ -25,9 +25,7 @@ body {
 .form-control::placeholder {
     color: #5c636a;
 }
-
 .right .card {
-    max-height: 575px;
     overflow-y: auto;
 }
 
@@ -49,3 +47,4 @@ rect {
 label {
     color: #d7e1ed;
 }
+

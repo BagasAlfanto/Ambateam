@@ -1,8 +1,9 @@
 @push('styles')
     <style>
         .moduls {
-            max-height: 300px; 
-            overflow-y: auto; 
+            max-height: 300px;
+            overflow-y: scroll;
+            scrollbar-color: rgb(159, 159, 159) #282C32;
         }
 
         .moduls .btn {
@@ -14,6 +15,15 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             margin-top: 1vh;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .buttons-container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+                margin-top: 1vh;
+            }
         }
     </style>
 @endpush
