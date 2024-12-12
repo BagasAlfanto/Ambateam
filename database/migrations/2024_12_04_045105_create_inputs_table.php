@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('total_hours');
+            $table->integer('total_quiz');
             $table->enum('comprehension_index', [1, 2, 3, 4, 5]);
             $table->date('date');
             $table->unsignedBigInteger('result_id')->nullable();

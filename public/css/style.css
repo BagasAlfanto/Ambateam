@@ -2,8 +2,9 @@
     background-color: #141414;
     color: white;
 }
+
 .navbar .button-login {
-    color: #D7E1ED;
+    color: #d7e1ed;
     font-size: 20px;
     font-weight: 600;
     padding: 8px 20px;
@@ -22,44 +23,48 @@
     padding: 30px 150px 30px 150px;
     transition: 0.3s ease-in;
 }
-.navbar img{
+
+.navbar img {
     width: 50px;
 }
 .navbar .navbar-brand img {
     margin-right: 20px;
 }
+
 .navbar .navbar-brand{
     color: #B9CBE3;
 }
+
 .content-land {
-    padding-top: 300px;
+    padding-top: 350px;
     text-align: center;
     color: #B9CBE3;
 }
+
 .content-land h2 {
     font-size: 60px;
 }
-.content-land p{
-    color: #D7E1ED;
+
+.content-land p {
+    color: #b9cbe3;
     font-size: 24px;
     margin-top: 30px;
     margin-bottom: 40px;
 }
 
-.content{
+.content {
     padding: 120px 150px 0px 150px;
 }
+
 .content .button-login{
     color: #D7E1ED;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
-
 }
 
-
 .button-start {
-    background-color: #B9CBE3;
+    background-color: #b9cbe3;
     color: #141414;
     font-size: 20px;
     padding: 12px 35px;
@@ -72,7 +77,6 @@
     font-weight: bold;
 }
 
-
 .graphBox {
     position: relative;
     width: 100%;
@@ -83,8 +87,6 @@
 }
 
 /* Navbar */
-
-
 .main-content {
     padding-top: 90px;
 
@@ -111,29 +113,29 @@
 
 .profile-container {
     margin-top: 50px;
-  }
+}
 
-  .graph h1 span {
+.graph h1 span {
     color: #0d6efd; /* Warna teks biru */
-  }
+}
 
-  .profile-img {
+.profile-img {
     max-width: 100%;
     border-radius: 50%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .badge-custom {
+.badge-custom {
     background-color: #ffc107; /* Warna emas */
     color: #000;
     font-size: 14px;
-  }
+}
 
-  .btn-custom {
+.btn-custom {
     background-color: #e7e7e7;
     border: none;
     color: #000;
-  }
+}
 
 @media screen and (max-width: 1024px) {
     .main-content {
@@ -146,11 +148,11 @@
         padding: 10px 100px 30px 100px;
         transition: 0.3s ease-in;
     }
-    .navbar .button-login{
+    .navbar .button-login {
         font-size: 20px;
         font-weight: 600;
     }
-    .content{
+    .content {
         padding: 120px 100px 0px 100px;
     }
 }
@@ -172,18 +174,18 @@
 
 }
 
-@media screen and (max-width : 480px) {
-    .sidebar{
+@media screen and (max-width: 480px) {
+    .sidebar {
         width: 60px;
     }
-    .sidebar .menu{
+    .sidebar .menu {
         display: none;
     }
-    .sidebar .nav-link{
+    .sidebar .nav-link {
         justify-content: center;
         padding-left: 0px;
     }
-    .sidebar .nav p{
+    .sidebar .nav p {
         display: none;
     }
     .main-content {

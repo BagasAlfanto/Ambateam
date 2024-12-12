@@ -18,6 +18,6 @@ class LogoutController extends Controller
         $session->invalidate();
         $session->regenerateToken();
 
-        return to_route('landingpage');
+        return to_route('landing');
     }
 }

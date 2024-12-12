@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
+            $table->float('score', 8, 2);
             $table->text('message');
             $table->timestamps();
         });

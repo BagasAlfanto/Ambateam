@@ -1,0 +1,52 @@
+body {
+    background-color: #141414;
+}
+
+.card {
+    background-color: #1e1f21;
+    border: none;
+}
+
+.form-control,
+.form-select {
+    background-color: #282c32;
+    color: white;
+    border: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: none;
+    border-color: #5c636a;
+}
+
+.left,
+.form-right,
+.form-control::placeholder {
+    color: #5c636a
+}
+
+.right .card {
+    height: 575px;
+    max-height: 575px;
+    overflow-y: auto;
+}
+
+.left .card {
+    height: 272px;
+}
+
+.moduls button {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #282c32;
+    border: none;
+}
+
+rect {
+    fill: #b9cbe3
+}
+
+label {
+    color: #d7e1ed;
+}
