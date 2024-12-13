@@ -30,12 +30,12 @@
             </div>
 
             <div class="mb-3">
-                <label for="hours" class="col-form-label">Total Hours:</label>
+                <label for="hours" class="col-form-label">Total Minute:</label>
                 <input
                     type="number"
                     class="form-control"
                     name="hours"
-                    placeholder="How many hours did you study?"
+                    placeholder="How many minutes did you study?"
                     style="background-color: #282C32; color:#fff"
                     {{ $isTodayAlreadySubmitted ? 'disabled' : '' }}
                 />
@@ -62,7 +62,7 @@
             <div class="mb-3">
                 <label for="modules[]">Module:</label>
                 @if ($isTodayAlreadySubmitted)
-                    <input class="form-control" placeholder="Select Module" disabled />
+                    <input class="form-control" placeholder="Select Module" disabled style="background-color: #282C32"/>
                 @else
                     <select class="js-select2-multi" multiple="multiple" name="modules[]">
                         @foreach ($modules as $module)
@@ -108,11 +108,12 @@
         </div>
 
         <div class="mb-3 text-end">
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('dashboard') }}" style="text-decoration: none">
                 <button
                     type="button"
                     class="btn btn-secondary"
                     style="background-color: #282C32; color:#B9CBE3"
+                    {{ $isTodayAlreadySubmitted ? 'disabled' : '' }}
                 >
                     Cancel
                 </button>
@@ -121,6 +122,7 @@
                 type="submit"
                 class="btn btn-success"
                 style="background-color: #B9CBE3; color:#282C32"
+                {{ $isTodayAlreadySubmitted ? 'disabled' : '' }}
             >
                 Send
             </button>
@@ -138,5 +140,6 @@
                 allowClear: true
             });
         });
+        
     </script>
 @endPushOnce

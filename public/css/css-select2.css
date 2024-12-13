@@ -1,6 +1,6 @@
-.js-select2-multi{
+.js-select2-multi {
     overflow-y: scroll;
-    scrollbar-color: rgb(159, 159, 159) #282C32;
+    scrollbar-color: rgb(159, 159, 159) #282c32;
 }
 .select2-container {
     width: 100% !important;
@@ -8,14 +8,14 @@
 
 /* Warna background hitam untuk dropdown pilihan */
 .select2-container--default .select2-results__option {
-    background-color: #282C32 !important;
+    background-color: #282c32 !important;
     color: white !important;
     border: none;
-
 }
 
 /* Warna background saat opsi di-hover atau dipilih */
-.select2-container--default .select2-results__option--highlighted[aria-selected] {
+.select2-container--default
+    .select2-results__option--highlighted[aria-selected] {
     background-color: #6c757d !important;
     color: white !important;
     border: none;
@@ -23,7 +23,7 @@
 
 /* Styling pada area input/dropdown utama */
 .select2-container--default .select2-selection--multiple {
-    background-color: #282C32 !important;
+    background-color: #282c32 !important;
     color: white !important;
     border: none;
     border-radius: 6px;
@@ -31,13 +31,16 @@
 
 /* Warna teks dalam tag selected di dalam dropdown */
 .select2-container--default .select2-selection__choice {
-    background-color: #282C32 !important;
+    background-color: #282c32 !important;
     color: white !important;
     border: none;
 }
-
+.select2-container--open{
+    left: 0px;
+    top: 0px;
+}
 @media screen and (max-width: 1024px) {
-    .button-input label{
+    .button-input label {
         width: 70px;
         font-size: 14px;
     }

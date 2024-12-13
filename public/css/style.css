@@ -2,7 +2,12 @@
     background-color: #141414;
     color: white;
 }
-
+.highcharts-background {
+    fill: #b9cbe3;
+}
+.highcharts-point {
+    fill: #282c32;
+}
 .navbar .button-login {
     color: #d7e1ed;
     font-size: 20px;
@@ -31,8 +36,8 @@
     margin-right: 20px;
 }
 
-.navbar .navbar-brand{
-    color: #B9CBE3;
+.navbar .navbar-brand {
+    color: #b9cbe3;
 }
 
 .content-land {
@@ -56,8 +61,8 @@
     padding: 120px 150px 0px 150px;
 }
 
-.content .button-login{
-    color: #D7E1ED;
+.content .button-login {
+    color: #d7e1ed;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
@@ -166,22 +171,21 @@
         font-size: 28px;
         font-weight: 600;
     }
-    .navbar .navbar-brand{
+    .navbar .navbar-brand {
         font-size: 32px;
     }
-    .navbar .navbar-brand img{
+    .navbar .navbar-brand img {
         width: 60px;
         height: 60px;
     }
     .content {
         padding: 120px 100px 0px 100px;
     }
-    .button-input label{
+    .button-input label {
         width: 60px;
         font-size: 12px;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .content-land {
@@ -213,17 +217,17 @@
         font-size: 24px;
         font-weight: 600;
     }
-    .navbar .navbar-brand{
+    .navbar .navbar-brand {
         font-size: 26px;
     }
-    .navbar .navbar-brand img{
+    .navbar .navbar-brand img {
         width: 50px;
         height: 50px;
     }
     .content {
         padding: 120px 80px 0px 80px;
     }
-    .button-input label{
+    .button-input label {
         width: 60px;
         font-size: 12px;
     }
@@ -250,10 +254,10 @@
         font-size: 18px;
         font-weight: 600;
     }
-    .navbar .navbar-brand{
+    .navbar .navbar-brand {
         font-size: 18px;
     }
-    .navbar .navbar-brand img{
+    .navbar .navbar-brand img {
         width: 40px;
         height: 40px;
     }
@@ -299,7 +303,7 @@
     .content {
         padding: 120px 30px 0px 30px;
     }
-    .button-input label{
+    .button-input label {
         width: 60px;
         font-size: 12px;
     }

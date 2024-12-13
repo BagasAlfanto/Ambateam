@@ -26,7 +26,7 @@ class Analyze extends Component
     public function __construct()
     {
         $this->modules = Modules::select('id', 'name')->get();
-        $this->isTodayAlreadySubmitted = Inputs::whereDate('created_at', today())->exists();
+        $this->isTodayAlreadySubmitted = Inputs::where('user_id', auth('web')->id())->whereDate('created_at', today())->exists();
     }
 
     /**

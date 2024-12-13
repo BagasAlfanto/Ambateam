@@ -1,8 +1,8 @@
 <x-layout.landing>
     <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand me-auto" href="{{ url('/') }}">
-            <img src="{{ asset('img/logo.png') }}" alt="Logo">
-            Ambateam
+            <img src="{{ asset('img/Logofix.png') }}" alt="Logo">
+            Amba
         </a>
 
         @auth

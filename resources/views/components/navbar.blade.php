@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <a class="navbar-brand me-auto" href="{{ url('/') }}">
-        <img src="{{ asset('img/logo.png') }}" alt="Logo">
-        Ambateam
+        <img src="{{ asset('img/Logofix.png') }}" alt="Logo">
+        Amba
     </a>
 
     @auth
@@ -12,7 +12,7 @@
         <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel" style="background-color:#282C32; color:#fff">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Anba</h5>
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Amba</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">

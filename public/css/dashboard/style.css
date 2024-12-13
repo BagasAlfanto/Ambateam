@@ -47,3 +47,6 @@ rect {
 label {
     color: #d7e1ed;
 }
+.btn-outline-light::-ms-check {
+    background-color: #090a0a;
+}
